@@ -27,3 +27,18 @@ button.addEventListener('click', event =>{
     window.location.href = './login.html';
 
 });
+
+const checkbox = document.querySelector('#checkbox-register');
+
+checkbox.addEventListener('change', () => {
+    const type = password.getAttribute('type');
+
+    if (type === 'password') {
+        password.setAttribute('type', 'text');
+        return;
+    };
+
+    password.setAttribute('type', 'password');
+
+    
+});
