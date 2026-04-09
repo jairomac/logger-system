@@ -35,3 +35,20 @@ button.addEventListener('click', (event) => {
 
     window.location.href = './login.html';
 });
+
+const checkbox = document.querySelector('#checkbox-recovery');
+
+checkbox.addEventListener('change', () => {
+    const type = new_password.getAttribute('type');
+
+    if (type === 'password') {
+        new_password.setAttribute('type', 'text');
+        confirm_new_password.setAttribute('type', 'text');
+        return;
+    };
+
+    new_password.setAttribute('type', 'password');
+    confirm_new_password.setAttribute('type', 'password');
+
+    
+});
